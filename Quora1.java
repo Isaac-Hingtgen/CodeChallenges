@@ -9,30 +9,29 @@
 
 public class Quora1 {
     public static void main(String [] argv) {
-        String str = "race";
-        String palindrome = getPalindrome(str);
+        String str = "zcdrace";
+        String palindrome = makePalindrome(str, 0, str.length() - 1);
+        System.out.print(palindrome);
     }
-
-    public static String getPalindrome(String str) {
-        char [] charArr = str.toCharArray();
-        boolean duplicate = false;
-        ArrayList<Character> list = new ArrayList<Character>();
-
-
-        for(char c : charArr) {
-            if(str.indexOf(c, str.indexOf(c) + 1) != -1) {
-                duplicate = true;
-                list.add(c);
-            }
+    public static String makePalindrome(String str, int li, int ri) {
+        if(li >= ri) {
+            return str;
         }
-        return null;
-    }
-
-    public static char [] reverse(char [] cArr) {
-        char [] newArr = new char[cArr.length];
-        for(char c : cArr) {
-            
+        if(str.charAt(li) == str.charAt(ri)) {
+            return makePalindrome(str, li + 1, ri - 1);
         }
-        return null;
+
+        String str1 = str.substring(0, ri+1) + str.charAt(li) + str.substring(ri+1);
+        String str2 = str.substring(0, li) + str.charAt(ri) + str.substring(li);
+        String pal1 = makePalindrome(str1, li, ri+1);
+        String pal2 = makePalindrome(str2, li, ri+1);
+        String bestPal = "";
+        if(pal1.length() == pal2.length()) {
+            bestPal = (pal1.compareTo(pal2) < 0) ? pal1 : pal2;
+        } else {
+            bestPal = (pal1.length() <= pal2.length()) ? pal1 : pal2;
+        }
+        return bestPal;
     }
+    
 }
