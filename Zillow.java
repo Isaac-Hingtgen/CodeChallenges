@@ -7,43 +7,19 @@
 import java.util.*;
 
 public class Zillow {
+    
     public static void main(String[] argv) {
         int[][] inputMatrix = { 
             {0, 3, 9, 1}, 
             {2, 0, 6, 4}, 
-            {1, 5, 3, 1} };
-
-        class Position {
-            private int row;
-            private int col;
-            private int coins;
-            public Position(int r, int c, int coin) {
-                row = r;
-                col = c;
-                coins = coin + inputMatrix[r][c];
-            }
-            public void setRow(int row) {
-                this.row = row;
-            }
-            public void setCol(int col) {
-                this.col = col;
-            }
-            public int getRow() {
-                return row;
-            }
-            public int getCol() {
-                return col;
-            }
-            public void addCoins(int amount) {
-                coins += amount;
-            }
-            public int getCoins() {
-                return coins;
-            }
-        }
+            {1, 5, 3, 1},
+            {7, 3, 2, 4}, 
+            {2, 4, 0, 3}, 
+            {3, 8, 4, 1} }; // (0 -> 3 -> 9 -> 6 -> 3 -> 2 -> 4 -> 3 -> 1) Expected: 31
 
         Queue<Position> q = new LinkedList<>();
         
+        Position.setInputMatrix(inputMatrix);
         Position start = new Position(0,0,0);
         q.add(start);
         int maxCoins = 0;
@@ -64,6 +40,29 @@ public class Zillow {
                 q.add(downPos);
             }   
         }
-        System.out.println(maxCoins);
+        System.out.println("The most coins that can be gathered is : " + maxCoins);
+    }
+    static class Position {
+        private int row;
+        private int col;
+        private int coins;
+        private static int[][] inputMatrix;
+        public Position(int r, int c, int coin) {
+            row = r;
+            col = c;
+            coins = coin + inputMatrix[r][c];
+        }
+        public static void setInputMatrix(int[][] matrix) {
+            inputMatrix = matrix;
+        }
+        public int getRow() {
+            return row;
+        }
+        public int getCol() {
+            return col;
+        }
+        public int getCoins() {
+            return coins;
+        }
     }
 }

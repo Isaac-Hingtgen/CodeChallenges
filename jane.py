@@ -17,15 +17,17 @@ def cons(a, b):
 
 
 def F(a,b):
-    arr = []
-    arr.append(a)
-    arr.append(b)
-    return arr
+    return [a, b]
 
 def car(con):
     arr = con(F)
-    print(arr[0])
+    print(arr[0], "\n")
+
+def cdr(con):
+    arr = con(F)
+    print(arr[1], "\n")
     
 
 
-car(cons(1,4))
+car(cons(1, 4))
+cdr(cons(3, 8))

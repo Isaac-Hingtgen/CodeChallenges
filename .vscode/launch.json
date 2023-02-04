@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Facebook1",
+            "request": "launch",
+            "mainClass": "Facebook1",
+            "projectName": "CodeChallenges_91fbb9b1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Google1",
+            "request": "launch",
+            "mainClass": "Google1",
+            "projectName": "CodeChallenges_91fbb9b1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Google2",
+            "request": "launch",
+            "mainClass": "Google2",
+            "projectName": "CodeChallenges_91fbb9b1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Google3",
+            "request": "launch",
+            "mainClass": "Google3",
+            "projectName": "CodeChallenges_91fbb9b1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Google4",
+            "request": "launch",
+            "mainClass": "Google4",
+            "projectName": "CodeChallenges_91fbb9b1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Quora1",
+            "request": "launch",
+            "mainClass": "Quora1",
+            "projectName": "CodeChallenges_91fbb9b1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Zillow",
+            "request": "launch",
+            "mainClass": "Zillow",
+            "projectName": "CodeChallenges_91fbb9b1"
+        }
+    ]
+}

@@ -13,12 +13,16 @@ class Node:
         self.val = key
    
 
-def getLargestPath(arr, cur, length):
+def getLargestPathRecursion(arr, cur, length):
     root = Node(0)
     if cur < length:
         root = Node(arr[cur])
-        root.left = getLargestPath(arr, cur + 2, length)
-        root.right = getLargestPath(arr, cur + 3, length)
+        root.left = getLargestPathRecursion(arr, cur + 2, length)
+        root.right = getLargestPathRecursion(arr, cur + 3, length)
     return max(root.left, root.right) + root.val
 
-print(max(getLargestPath(numbers, 0, len(numbers)), getLargestPath(numbers, 1, len(numbers))))
+def getLargestPath(arr):
+    return max(getLargestPathRecursion(arr, 0, len(arr)), getLargestPathRecursion(arr, 1, len(arr)))
+
+
+print(getLargestPath(numbers))

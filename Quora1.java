@@ -5,7 +5,7 @@
  * return the lexicographically earliest one (the first one alphabetically).
  */
 
- import java.util.ArrayList;
+
 
 public class Quora1 {
     public static void main(String [] argv) {

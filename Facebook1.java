@@ -6,7 +6,7 @@
 
 public class Facebook1 {
    public static void main (String [] argv) {
-       System.out.println(findNumWays(11129121));
+       System.out.println(findNumWays(11129122));
    } 
 
     public static int findNumWays(int input) {
@@ -15,7 +15,7 @@ public class Facebook1 {
         int total = 1;
         int i = 0;
         while (i < str.length()) {
-            while ((i < str.length() && Character.getNumericValue(str.charAt(i)) <= 2)) {
+            while ((i < str.length() - 1 && Character.getNumericValue(str.charAt(i)) <= 2)) {
                 if (str.charAt(i) == '1') {
                     count++;
                     i++;
@@ -28,7 +28,7 @@ public class Facebook1 {
             }
             i += 1;
             total *= fibo(count);
-            count = 0;
+            count = 1;
         }
         return total;
    }

@@ -9,7 +9,7 @@ public class Google4 {
         String palindrome = "waterrfetawx";
         int minSteps = palindromeFinder(palindrome, 0, palindrome.length() - 1, 0);
         int k = 2;
-        System.out.print("Steps required: " + minSteps + "\nCan complete in " + k + " steps: " + (minSteps <= k));
+        System.out.print("Steps required: " + minSteps + "\nAble to complete in " + k + " steps: " + (minSteps <= k));
    } 
 
    public static int palindromeFinder(String pal, int li, int ri, int k) {
