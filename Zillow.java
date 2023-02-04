@@ -10,9 +10,9 @@ public class Zillow {
     
     public static void main(String[] argv) {
         int[][] inputMatrix = { 
-            {0, 3, 9, 1}, 
-            {2, 0, 6, 4}, 
-            {1, 5, 3, 1},
+            {0, 3, 9, 0}, 
+            {2, 0, 6, 1}, 
+            {2, 5, 3, 1},
             {7, 3, 2, 4}, 
             {2, 4, 0, 3}, 
             {3, 8, 4, 1} }; // (0 -> 3 -> 9 -> 6 -> 3 -> 2 -> 4 -> 3 -> 1) Expected: 31
