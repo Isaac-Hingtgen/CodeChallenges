@@ -27,17 +27,17 @@ public class Facebook1 {
                 else {break;}
             }
             i += 1;
-            total *= fibo(count);
+            total *= fibonacci(count);
             count = 1;
         }
         return total;
    }
 
-   public static int fibo(int count) {
+   public static int fibonacci(int count) {
           if (count <= 1) {
                return 1;
           }
-          return fibo(count - 1) + fibo(count - 2);
+          return fibonacci(count - 1) + fibonacci(count - 2);
    }
 
           
